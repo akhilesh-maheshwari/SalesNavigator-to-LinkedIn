@@ -1,0 +1,24 @@
+{
+  "title": "Sales Nav URL to LinkedIn URL",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "fileName": {
+      "title": "File Name / Tag",
+      "type": "string",
+      "description": "A label for this run.",
+      "editor": "textfield",
+      "default": "SNL_Run"
+    },
+    "profiles": {
+      "title": "Sales Nav URLs (Single or Bulk)",
+      "type": "array",
+      "description": "Sales Navigator URLs to convert to LinkedIn profile URLs.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/sales/lead/ACwAAAxxxxxx,NAME_SEARCH,xxxx"
+      ]
+    }
+  },
+  "required": ["fileName", "profiles"]
+}
