@@ -1,0 +1,55 @@
+{
+  "actorSpecification": 1,
+  "name": "sales-nav-url-to-linkedin-url",
+  "title": "Sales Nav URL to LinkedIn URL",
+  "description": "Convert Sales Navigator URLs to LinkedIn profile URLs in bulk. Single or bulk input supported.",
+  "version": "1.0",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Sales Nav URL to LinkedIn URL Output",
+    "description": "Sales Navigator profiles with converted LinkedIn URLs.",
+    "properties": {
+      "results": {
+        "type": "string",
+        "title": "Results",
+        "template": "{{links.apiDefaultDatasetUrl}}/items"
+      }
+    }
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": [
+              "input_url",
+              "normalized_url",
+              "data_status",
+              "profile_id",
+              "full_name",
+              "first_name",
+              "last_name",
+              "headline",
+              "location",
+              "country_code",
+              "linkedin_url",
+              "sales_nav_url",
+              "current_company",
+              "current_title",
+              "industry",
+              "profile_picture",
+              "request_id",
+              "order_id",
+              "processed_at"
+            ]
+          },
+          "display": {
+            "component": "table"
+          }
+        }
+      }
+    }
+  }
+}
